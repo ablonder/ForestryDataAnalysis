@@ -40,3 +40,5 @@ classifyForest <- function(forest){
     return("D")
   }
 }
+
+loadForestFile("trees.csv")
