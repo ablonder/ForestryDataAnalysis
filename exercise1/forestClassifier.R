@@ -27,7 +27,7 @@ classifyForest <- function(forest){
   forest = filter(forest, !is.na(group))
   # then check if there are enough 20" and 12" conifers for class A
   if(count(filter(forest, group == "conifer", dbh >= 20)) >= 10 && 
-     count(filter(forest, group == "conifer", dbh >= 12)) >= 10){
+     count(filter(forest, group == "conifer", dbh >= 12)) >= 20){
     return("A")
   }else if(count(filter(forest, group == "conifer", dbh >= 12)) >= 20){
     # otherwise, check if there are enough 12" conifers for class B
